@@ -99,8 +99,7 @@ class MainActivity : AppCompatActivity(), PickiTCallbacks {
         if (checkSelfPermission()) {
             if (videoImageRef == "video") {
                 videoImageRef = ""
-                val intent: Intent
-                intent = if (Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED) {
+                val intent: Intent = if (Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED) {
                     Intent(Intent.ACTION_PICK, MediaStore.Video.Media.EXTERNAL_CONTENT_URI)
                 } else {
                     Intent(Intent.ACTION_PICK, MediaStore.Video.Media.INTERNAL_CONTENT_URI)
@@ -109,9 +108,7 @@ class MainActivity : AppCompatActivity(), PickiTCallbacks {
                 intent.type = "video/*"
                 intent.action = Intent.ACTION_GET_CONTENT
                 intent.putExtra("return-data", true)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
-                    intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-                }
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 activityResultLauncher.launch(intent)
             } else {
@@ -126,9 +123,7 @@ class MainActivity : AppCompatActivity(), PickiTCallbacks {
                 intent.type = "image/*"
                 intent.action = Intent.ACTION_GET_CONTENT
                 intent.putExtra("return-data", true)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
-                    intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-                }
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 activityResultLauncher.launch(intent)
             }
@@ -176,7 +171,7 @@ class MainActivity : AppCompatActivity(), PickiTCallbacks {
         }
     }
 
-    var activityResultLauncher = registerForActivityResult<Intent, ActivityResult>(
+    private var activityResultLauncher = registerForActivityResult<Intent, ActivityResult>(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {

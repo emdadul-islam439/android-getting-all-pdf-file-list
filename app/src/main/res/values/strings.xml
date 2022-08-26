@@ -5,4 +5,12 @@
     <string name="original_path"><u>Original Path</u></string>
     <string name="pickit_path"><u>PickiT Path</u></string>
     <string name="multiple_files_selected">Multiple files selected</string>
+
+    //from kPermission
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="granted_permissions" translatable="false">Granted: %s</string>
+    <string name="permanently_denied_permissions" translatable="false">Permanently denied: %s</string>
+    <string name="permissions_required" translatable="false">Permissions required</string>
+    <string name="rationale_permissions" translatable="false">Rationale: %s</string>
+    <string name="request_again" translatable="false">Request again</string>
 </resources>

@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/01_Flutter/00_Projects/GettingAllPDFFiles/app/src/main/res/drawable/progress_bar.xml" value="0.1095" />
+        <entry key="..\:/01_Flutter/00_Projects/GettingAllPDFFiles/app/src/main/res/drawable/ripple_effect.xml" value="0.1095" />
         <entry key="..\:/01_Flutter/00_Projects/GettingAllPDFFiles/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/01_Flutter/00_Projects/GettingAllPDFFiles/app/src/main/res/layout/activity_main2.xml" value="0.22826086956521738" />
         <entry key="..\:/01_Flutter/00_Projects/GettingAllPDFFiles/app/src/main/res/layout/dialog_layout.xml" value="0.22826086956521738" />
       </map>
     </option>
